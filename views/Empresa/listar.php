@@ -174,6 +174,7 @@
             <?php endif; ?>
         </tbody>
     </table>
+    
 </div>
 <script>
    const confirmLogout = () => {

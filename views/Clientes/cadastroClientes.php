@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela inicial</title>
     <link rel="stylesheet" href="index.css">
-    
 
     <style>
         body {
@@ -52,7 +51,6 @@
             font-size: 15px;
             width: 100%;
             letter-spacing: 2px;
-
         }
 
         .labelInput {
@@ -61,7 +59,6 @@
             left: 0px;
             pointer-events: none;
             transition: .5s;
-
         }
 
         .inputUser:focus~.labelInput,
@@ -95,11 +92,30 @@
             font-size: 15px;
             border-radius: 10px;
             cursor: pointer;
-
         }
 
         #submit:hover {
             background-image: linear-gradient(to right, rgb(18, 40, 66), rgb(121, 123, 124));
+        }
+
+        #back-button {
+            background-color: dodgerblue;
+            border: none;
+            padding: 10px;
+            color: white;
+            font-size: 15px;
+            border-radius: 10px;
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            width: 20%;
+            
+        }
+
+        #back-button:hover {
+            background-color: rgb(18, 40, 66);
         }
     </style>
 
@@ -127,7 +143,6 @@
                     <input type="tel" name="telefone" id="telefone" class="inputUser" required>
                     <label class="labelInput" for="telefone">Telefone</label>
                 </div>
-                <br>
                 <p>Sexo:</p>
                 <input type="radio" id="feminino" name="genero" value="feminino" required>
                 <label for="feminino">Feminino</label>
@@ -147,7 +162,7 @@
                 <br>
                 <div class="inputBox">
                     <input type="text" name="cidade" id="cidade" class="inputUser" required>
-                    <label class="labelInput" for="cidade"> Cidade:</label>
+                    <label class="labelInput" for="cidade">Cidade:</label>
                 </div>
                 <br>
                 <br>
@@ -164,10 +179,10 @@
                 <br>
                 <br>
                 <button type="submit" name="submit" id="submit">Cadastrar</button>
-
-
             </fieldset>
         </form>
+        
+        <a href="/company/empresas/listar" id="back-button">Voltar</a>
     </div>
 </body>
 

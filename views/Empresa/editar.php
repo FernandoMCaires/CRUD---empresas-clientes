@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -59,38 +60,65 @@
             background-color: dodgerblue;
             color: white;
             border: none;
-            padding: 10px 15px;
-            border-radius: 5px;
+            padding: 15px 0;
+            width: 100%;
+            border-radius: 8px;
             cursor: pointer;
             transition: background-color 0.3s;
+            text-decoration: none;
+            display: inline-block;
         }
 
         .button-editar:hover {
             background-color: deepskyblue;
         }
+
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .button-voltar {
+            background-color: crimson;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 15px;
+            transition: background-color 0.3s;
+        }
+
+        .button-voltar:hover {
+            background-color: darkred;
+        }
     </style>
 </head>
+
 <body>
 
-<div class="form-edit-empresa">
-    <form action="/company/empresas/editar/<?= htmlspecialchars($empresaDados['id']); ?>" method="POST">
-        <label for="nome">Nome:</label>
-        <input type="text" name="nome" id="nome" value="<?= htmlspecialchars($empresaDados['nome']); ?>" required>
+    <div class="form-edit-empresa">
+        <form action="/company/empresas/editar/<?= htmlspecialchars($empresaDados['id']); ?>" method="POST">
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" id="nome" value="<?= htmlspecialchars($empresaDados['nome']); ?>" required>
 
-        <label for="email">Email:</label>
-        <input type="email" name="email" id="email" value="<?= htmlspecialchars($empresaDados['email']); ?>" required>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" value="<?= htmlspecialchars($empresaDados['email']); ?>" required>
 
-        <label for="senha">Senha:</label>
-        <div class="password-container">
-            <input type="password" name="senha" id="senha" value="<?= htmlspecialchars($empresaDados['senha']); ?>" required>
-        </div>
+            <label for="senha">Senha:</label>
+            <div class="password-container">
+                <input type="password" name="senha" id="senha" value="<?= htmlspecialchars($empresaDados['senha']); ?>" required>
+            </div>
 
-        <button type="submit" class="button-editar">Atualizar!</button>
-    </form>
-</div>
+            <div class="button-container">
+                <button type="submit" class="button-editar">Atualizar!</button>
+            </div>
+        </form>
 
+        <a href="/company/empresas/listar" class="button-voltar">Voltar</a>
 
+    </div>
 
 </body>
-</html>
 
+</html>
