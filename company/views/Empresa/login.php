@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,10 +37,12 @@
             background-color: dodgerblue;
             border-radius: 8px;
         }
-        h1{
+
+        h1 {
             font-size: 32px;
         }
-        h2{
+
+        h2 {
             font-size: 22px;
             padding-bottom: 20px;
         }
@@ -48,10 +51,10 @@
             position: relative;
             margin-bottom: 20px;
             border: 1px solid;
-            border-radius:5px;
-            
+            border-radius: 5px;
+
         }
-        
+
         .inputUser {
             background: none;
             border: none;
@@ -115,26 +118,28 @@
         }
     </style>
 </head>
+
 <body>
 
-<div class="box">
-    <form method="POST" action="/company/login">
-        <h1>Seja bem-vindo!</h1>
-        <h2>Já possui login?</h2>
-        <div class="inputBox">
-            <input type="email" name="email" class="inputUser" required>
-            <label class="labelInput">Email</label>
-        </div>
-        <div class="inputBox">
-            <input type="password" name="senha" class="inputUser" required>
-            <label class="labelInput">Senha</label>
-        </div>
-        <button type="submit" id="submit">Login</button>
+    <div class="box">
+        <form method="POST" action="/company/login">
+            <h1>Seja bem-vindo!</h1>
+            <h2>Já possui login?</h2>
+            <div class="inputBox">
+                <input type="email" name="email" class="inputUser" required>
+                <label class="labelInput">Email</label>
+            </div>
+            <div class="inputBox">
+                <input type="password" name="senha" class="inputUser" required>
+                <label class="labelInput">Senha</label>
+            </div>
+            <button type="submit" id="submit">Login</button>
 
-        <h3>Ainda não tem uma conta?</h3>
-        <a href="/company/empresas/cadastrar">Clique aqui</a>
-    </form>
-</div>
+            <h3>Ainda não tem uma conta?</h3>
+            <a href="/company/empresas/cadastrar">Clique aqui</a>
+        </form>
+    </div>
 
 </body>
+
 </html>

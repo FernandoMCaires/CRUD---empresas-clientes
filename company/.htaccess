@@ -9,10 +9,11 @@ RewriteCond %{REQUEST_FILENAME} !-f
 # Verifica se o diretório solicitado não existe
 RewriteCond %{REQUEST_FILENAME} !-d
 
-# Redireciona todas as solicitações para index.php
+# Redireciona todas as solicitações para index.php, exceto se for um arquivo CSS
 RewriteRule ^(.*)$ index.php [QSA,L]
 
 # Define o tipo de arquivo CSS
 AddType text/css .css
 
-
+# Permitir acesso direto a arquivos CSS
+RewriteRule ^style/(.*)$ style/$1 [L]

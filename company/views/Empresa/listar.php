@@ -70,7 +70,7 @@
             cursor: pointer;
             transition: background-color 0.3s;
             margin-right: 10px;
-            /* Espaçamento entre os botões */
+            
         }
 
         button:hover {
@@ -163,7 +163,7 @@
         <div class="cadastrar-cliente">
             <p>Quer cadastrar um cliente?</p>
             <a class="button-add" href="/company/clientes/cadastro">
-                <img src="../../assets/images/sinal-de-mais.png" alt="sinal de + para adicionar um cliente">
+                <p>Clique aqui!</p>
             </a>
         </div>
         <table class="clientes-table">
@@ -219,6 +219,7 @@
                 document.getElementById('logout-form').submit();
             }
         }
+
     </script>
 </body>
 
